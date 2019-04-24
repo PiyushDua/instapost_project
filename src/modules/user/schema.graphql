@@ -1,0 +1,55 @@
+type Profile {
+  firstName: String
+  lastName: String
+  mobilePhone: String
+  secondEmail: String
+  login: String
+  email: String
+}
+
+type Email {
+  value: String
+  status: String
+  type: String
+}
+
+type Recovery {
+  question: String
+}
+
+type Provider {
+  type: String
+  name: String
+}
+
+type Credential {
+  emails: [Email]
+  recovery_question: Recovery
+  provider: Provider
+}
+
+type Self {
+  href: String
+}
+
+type User {
+  id: String
+  status: String
+  created: String
+  activated: String
+  statusChanged: String
+  lastLogin: String
+  lastUpdated: String
+  passwordChanged: String
+  profile: Profile
+  credentials: Credential
+}
+
+input IData {
+  firstName: String
+  lastName: String
+  email: String
+  login: String
+  mobilePhone: String
+  password: String
+}

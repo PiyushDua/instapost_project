@@ -1,0 +1,8 @@
+type Post {
+  id: String
+  likes: [String]
+  text: String
+  createdAt: String
+  createdBy: String
+  isLiked: Boolean
+}
